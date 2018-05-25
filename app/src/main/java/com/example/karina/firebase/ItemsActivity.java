@@ -30,7 +30,7 @@ public class ItemsActivity extends AppCompatActivity {
     DatabaseReference productDatabase;
     List<Item> items;
 
-    public static final String EXTRA_MESSAGE = "com.example.dylan.firebase_app";
+    public static final String EXTRA_MESSAGE = "com.example.karina.firebase;";
 
 
     @Override
