@@ -7,7 +7,7 @@
     tools:context="com.example.karina.firebase.SignUpActivity">
 
     <EditText
-        android:id="@+id/emailtxt"
+        android:id="@+id/emailtxtSU"
         android:layout_width="227dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/passwordtxt"
+        android:id="@+id/passwordtxtSU"
         android:layout_width="232dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -35,7 +35,7 @@
         android:inputType="textPersonName|textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/emailtxtSU" />
 
     <Button
         android:id="@+id/btnRegistrarse"
@@ -45,10 +45,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="48dp"
         android:fontFamily="@font/roboto"
+        android:onClick="signUp"
         android:text="REGISTRARSE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordtxtSU" />
 
     <ProgressBar
         android:id="@+id/progressBarSignUp"

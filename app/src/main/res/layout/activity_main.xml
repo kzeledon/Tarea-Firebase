@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.067" />
 
     <EditText
-        android:id="@+id/emailtxt"
+        android:id="@+id/emailtxtSU"
         android:layout_width="227dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/welcometxt" />
 
     <EditText
-        android:id="@+id/passwordtxt"
+        android:id="@+id/passwordtxtSU"
         android:layout_width="232dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -49,7 +49,7 @@
         android:inputType="textPersonName|textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/emailtxtSU" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -59,10 +59,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/roboto"
+        android:onClick="login"
         android:text="INICIAR SESIÓN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordtxtSU" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -98,6 +99,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/roboto"
+        android:onClick="openSignUpActivity"
         android:text="Registrarte"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
