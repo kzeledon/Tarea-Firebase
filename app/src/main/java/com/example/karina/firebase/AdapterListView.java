@@ -3,11 +3,13 @@ package com.example.karina.firebase;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -20,7 +22,7 @@ public class AdapterListView extends ArrayAdapter<Item> {
     private final Activity context;
     private List<Item> items = null;
     DatabaseReference productDatabase;
-    public static final String EXTRA_MESSAGE = "com.example.dylan.firebase_app";
+    public static final String EXTRA_MESSAGE = "com.example.karina.firebase";
 
 
 
@@ -41,11 +43,13 @@ public class AdapterListView extends ArrayAdapter<Item> {
 
         TextView txtName = (TextView) rowView.findViewById(R.id.txtNombre);
         TextView txtPrice = (TextView) rowView.findViewById(R.id.txtPrecio);
-        FloatingActionButton deleteButton = rowView.findViewById(R.id.imgDelete);
-        final FloatingActionButton detailButton = rowView.findViewById(R.id.imgDetail);
+        ImageView deleteButton = rowView.findViewById(R.id.imgDelete);
+        final ImageView detailButton = rowView.findViewById(R.id.imgDetail);
 
         txtName.setText(items.get(position).getName());
         txtPrice.setText(items.get(position).getPrice());
+
+        Log.i("ListView", items.get(position).getName());
 
         deleteButton.setOnClickListener(new Button.OnClickListener() {
 
